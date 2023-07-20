@@ -6904,6 +6904,7 @@ webpackJsonp([0], [function(t, e, n) {
                 "click .InfoPublicWorksMapClose": "closeMap"
             },
             initialize: function(t) {
+                console.log('-----initilize------')
                 a.prototype.initialize.call(this, t),
                 s.bindAll(this, "handleScroll", "recalcElementsPos"),
                 this.recalcElementsPos.__throttled = s.throttle(this.recalcElementsPos, 1e3)
@@ -8837,7 +8838,9 @@ webpackJsonp([0], [function(t, e, n) {
                     }),
                     this.categoriesPos = t;
                     var n = [];
+                    console.log('is not Mobile-----')
                     this.$(".ProjectsList .ProjectsListItem").each(function(t, s) {
+                        console.log('looping projects--------');
                         n.push({
                             shown: !e(s).hasClass("invisible"),
                             $item: e(s),
