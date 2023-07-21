@@ -1,3 +1,8 @@
+function changeRoute(url) {
+    window.location.href = url;
+}
+
+
 webpackJsonp([0], [function(t, e, n) {
     (function(t) {
         function e(t) {
@@ -5406,7 +5411,7 @@ webpackJsonp([0], [function(t, e, n) {
                 s = {
                     "sm:index": n + "",
                     "sm:news": n + "news/",
-                    "sm:projects": n + "work.html",
+                    "sm:projects": n + "work/",
                     "sm:info": n + "info/"
                 };
             return s[t]
@@ -6808,7 +6813,8 @@ webpackJsonp([0], [function(t, e, n) {
         }()
     }(),
     t.exports = r(a, s, a.nunjucksPrecompiled["assets/app/front/components/Info/InfoMedia.jinja"], o)
-  }, function(t, e, n) {
+  }, 
+  function(t, e, n) {
     var s,
         a = n(30);
     s = a.currentEnv ? a.currentEnv : a.currentEnv = new a.Environment([], void 0);
@@ -7054,7 +7060,8 @@ webpackJsonp([0], [function(t, e, n) {
     }], {
         name: "Styled Map"
     })
-  }, function(t, e, n) {
+  }, 
+  function(t, e, n) {
     (function(e) {
         var s = n(5),
             a = n(6),
@@ -7067,7 +7074,7 @@ webpackJsonp([0], [function(t, e, n) {
         t.exports = o.extend({
             template: c,
             el: ".NewsPopup",
-            rootUrl: "/news/",
+            rootUrl: "/news.html",
             apiUrl: "/api/news/all/",
             events: {
                 "click .NewsPopupClose": "close",
@@ -7099,9 +7106,10 @@ webpackJsonp([0], [function(t, e, n) {
                 }
             },
             close: function() {
-                s.history.navigate(this.rootUrl, {
-                    trigger: "true"
-                })
+                // s.history.navigate(this.rootUrl, {
+                //     trigger: "true"
+                // })
+                window.location.href=this.rootUrl;
             },
             sharePinterest: function() {
                 if (this.currentNews) {
@@ -7899,7 +7907,7 @@ webpackJsonp([0], [function(t, e, n) {
         t.exports = o.extend({
             template: i,
             el: ".ProjectPopup",
-            rootUrl: "work.html",
+            rootUrl: "/work.html",
             events: {
                 "click .ProjectPopupClose": "close",
                 "mouseenter .ProjectItemCityWrapper": "onCityMouseEnter",
@@ -7951,9 +7959,10 @@ webpackJsonp([0], [function(t, e, n) {
                 }
             },
             close: function() {
-                s.history.navigate(this.rootUrl, {
-                    trigger: "true"
-                })
+                // s.history.navigate(this.rootUrl, {
+                //     trigger: "true"
+                // })
+                window.location.href=this.rootUrl;
             },
             sharePinterest: function() {
                 if (this.currentProject) {
@@ -9248,7 +9257,11 @@ webpackJsonp([0], [function(t, e, n) {
         }()
     }(),
     t.exports = r(a, s, a.nunjucksPrecompiled["assets/app/front/components/TopNav/main.svg"], o)
-  }, function(t, e, n) {
+  }, 
+  
+  
+  
+  function(t, e, n) {
     (function(e) {
         var s = (n(6), n(27));
         n(92);
