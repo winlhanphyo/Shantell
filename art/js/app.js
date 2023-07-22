@@ -2,6 +2,19 @@ function changeRoute(url) {
     window.location.href = url;
 }
 
+function windowScroll() {
+    var scrollItems = document.querySelectorAll(".ProjectsListItem, .NewsListItem");
+    for (var i = 0; i < scrollItems.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = scrollItems[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        scrollItems[i].classList.remove("invisible");
+      }
+    }
+}
+window.addEventListener("scroll", windowScroll);
+
 
 webpackJsonp([0], [function(t, e, n) {
     (function(t) {
