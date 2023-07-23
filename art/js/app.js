@@ -80,7 +80,7 @@ $(document).ready(function (event) {
   });
 
   const currentUrl = window.location.href;
-  if (currentUrl.indexOf('/work') !== -1 || currentUrl.indexOf('/news') !== -1 && currentUrl.indexOf('/info') !== -1) {
+  if (currentUrl.indexOf('/work') !== -1 || currentUrl.indexOf('/news') !== -1 || currentUrl.indexOf('/info') !== -1) {
     window.addEventListener("scroll", windowScroll);
     window.addEventListener("scroll", handleParalax);
   }
